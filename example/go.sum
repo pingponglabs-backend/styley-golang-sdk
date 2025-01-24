@@ -1,0 +1,4 @@
+github.com/pingponglabs-backend/sdks/pingpong-golang-sdk v0.0.0-20241022172620-c9bb641bbeaa h1:Q6IdfvH2RwgoskxHf2AoPkoJhcSfKLNeuA1trqKJke4=
+github.com/pingponglabs-backend/sdks/pingpong-golang-sdk v0.0.0-20241022172620-c9bb641bbeaa/go.mod h1:qc0Ez5O4G5ZxAzJMp3gR2Czq5SnnbRvcglXlQz6YaVM=
+github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
+github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
