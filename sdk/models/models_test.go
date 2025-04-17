@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/internal/http"
+	"github.com/pingponglabs-backend/styley-golang-sdk/internal/http"
 )
 
 const (
@@ -43,7 +43,7 @@ func TestGetModelByName(t *testing.T) {
 		{
 			name:        "Error: Model Not Found",
 			apikey:      "xxx-xxxx-xxx-xxxx", //Replace with valid API key
-			modelName:   "/NonExistentModel",// Model that doesn't exist
+			modelName:   "/NonExistentModel", // Model that doesn't exist
 			expectErr:   true,
 			expectModel: "",
 		},
@@ -77,13 +77,13 @@ func TestGetModelsById(t *testing.T) {
 			name:      "Success API response",
 			modelID:   "844218fa-c5d0-4cee-90ce-0b42d226ac8d",
 			expectErr: false,
-			apikey:    "xxx-xxxx-xxx-xxxx",//Replace with the valid APIkey
+			apikey:    "xxx-xxxx-xxx-xxxx", //Replace with the valid APIkey
 		},
 		{
 			name:      "Error: Invalid Model ID",
 			modelID:   "invalid-id",
 			expectErr: true,
-			apikey:    "xxx-xxxx-xxx-xxxx",//Replace with the valid APIkey
+			apikey:    "xxx-xxxx-xxx-xxxx", //Replace with the valid APIkey
 		},
 		{
 			name:      "Error: UnAuthorized",
@@ -119,7 +119,7 @@ func TestModelsList(t *testing.T) {
 	}{
 		{
 			name:         "sucess API response",
-			apikey:       "xxx-xxxx-xxx-xxxx",//Replace with the valid API key
+			apikey:       "xxx-xxxx-xxx-xxxx", //Replace with the valid API key
 			expectErr:    false,
 			expectModels: 243,
 		},

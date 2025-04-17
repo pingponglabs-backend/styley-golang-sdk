@@ -1,28 +1,36 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 
-	"github.com/pingponglabs-backend/sdks/pingpong-golang-sdk/sdk"
-	"github.com/pingponglabs-backend/sdks/pingpong-golang-sdk/sdk/deployments"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk/deployments"
 )
 
 func main() {
 	client := sdk.NewClient(sdk.WithKey(os.Getenv("X_STYLEY_KEY")))
 
-	deployment, err := client.Deployments().Create(deployments.CreateDeployment{
-		Name: "Background Removal",
+	deploymentReq := deployments.CreateDeployment{
+		Name:    "Background Remover Pro",
+		ModelId: "3ca20b58-a07b-492a-8294-e366b5122947",
 		Args: map[string]interface{}{
-			"input": "https://cdn.mediamagic.dev/media/c7dbd266-3aa3-11ed-8e27-e679ed67c206.jpeg",
+			"image_file": "https://cdn2.styley.ai/d37266e2-fe3e-11ef-b7e7-246e96be0954.png",
 		},
-		Model: "844218fa-c5d0-4cee-90ce-0b42d226ac8d",
-		Sync:  true,
-	})
-	if err != nil {
-		panic(err)
+		OutputFormat: "jpeg",
+		OutputWidth:  300,
+		OutputHeight: 300,
+		Sync:         true,
 	}
-	log.Printf("deployment: %v", deployment)
+	deplyementResponse, err := client.Deployments().Create(deploymentReq)
+	if err != nil {
+		fmt.Println("error", err)
+		return
+	}
+
+	fmt.Printf("deplyementResponse:: %+v", deplyementResponse)
+
 }
 
 func RunGetJobExample(client *sdk.Client) {

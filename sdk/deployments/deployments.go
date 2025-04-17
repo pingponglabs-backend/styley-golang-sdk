@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"time"
 
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/internal/http"
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk/models"
+	"github.com/pingponglabs-backend/styley-golang-sdk/internal/http"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk/models"
 	"github.com/pkg/errors"
 )
 
@@ -43,12 +43,12 @@ func (c *Client) List() (*DeploymentsResponse, error) {
 }
 
 func (c *Client) Create(deployment CreateDeployment) (*Deployment, error) {
-	model, err := c.modelsClient.GetByID(deployment.Model)
+	model, err := c.modelsClient.GetByID(deployment.ModelId)
 	if err != nil {
-		return nil, errors.Wrap(err, "failed to get model by ModelID: "+deployment.Model)
+		return nil, errors.Wrap(err, "failed to get model by ModelId: "+deployment.ModelId)
 	}
 
-	deployment.Model = model.ID
+	deployment.ModelId = model.ID
 
 	body, err := json.Marshal(deployment)
 	if err != nil {

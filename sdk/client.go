@@ -3,9 +3,9 @@ package sdk
 import (
 	"os"
 
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/internal/http"
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk/deployments"
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk/models"
+	"github.com/pingponglabs-backend/styley-golang-sdk/internal/http"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk/deployments"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk/models"
 )
 
 const (

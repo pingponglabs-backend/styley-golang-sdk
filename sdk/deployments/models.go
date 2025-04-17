@@ -1,10 +1,13 @@
 package deployments
 
 type CreateDeployment struct {
-	Name  string                 `json:"name"`
-	Args  map[string]interface{} `json:"args"`
-	Model string                 `json:"model_id"`
-	Sync  bool                   `json:"sync"`
+	Name         string                 `json:"name"`
+	Args         map[string]interface{} `json:"args"`
+	ModelId      string                 `json:"model_id"`
+	Sync         bool                   `json:"sync"`
+	OutputFormat string                 `json:"output_format,omitempty"`
+	OutputWidth  int                    `json:"output_width,omitempty"`
+	OutputHeight int                    `json:"output_height,omitempty"`
 }
 
 type Job struct {

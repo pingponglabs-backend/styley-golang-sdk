@@ -72,9 +72,9 @@ Organize your projects using a Go workspace:
 Install the Styley SDK using:
 
 ```bash
-go get git.mediamagic.ai/styley-sdks/styley-golang-sdk@latest
+go get github.com/pingponglabs-backend/styley-golang-sdk@latest
 
-go get git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk/deployments
+go get github.com/pingponglabs-backend/styley-golang-sdk/sdk/deployments
 
 or 
 
@@ -113,8 +113,8 @@ package main
 
 import (
 	"fmt"
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk"
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk/deployments"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk/deployments"
 )
 
 func main() {
@@ -133,6 +133,7 @@ func main() {
 			"width":           "672",
 		},
 		Model: "66a8ccd5-ed5d-4133-b0c8-c3862a575a9e",
+		
 	})
 
 	if err != nil {
@@ -145,6 +146,44 @@ func main() {
 
 ```
 
+This example demonstrates how to **Create deployment** based on user preferences, allowing customization of the output format, width, and height. The method returns a response containing a job_id, which can be used to retrieve the final results.
+
+
+```go
+package main
+
+import (
+	"fmt"
+	"os"
+
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk/deployments"
+)
+
+func main() {
+	client := sdk.NewClient()
+
+	deploymentReq := deployments.CreateDeployment{
+		Name:    "Background Remover Pro",
+		ModelId: "3ca20b58-a07b-492a-8294-e366b5122947",
+		Args: map[string]interface{}{
+			"image_file": "https://cdn2.styley.ai/d37266e2-fe3e-11ef-b7e7-246e96be0954.png",
+		},
+		OutputFormat: "jpeg",
+		OutputWidth:  300,
+		OutputHeight: 300,
+		Sync:         true,
+	}
+	deplyementResponse, err := client.Deployments().Create(deploymentReq)
+	if err != nil {
+		fmt.Println("error", err)
+		return
+	}
+
+	fmt.Printf("deplyementResponse:: %+v \n", deplyementResponse)
+}
+
+```
 ---
 
 ### 📄 **Get Job**
@@ -156,7 +195,7 @@ package main
 import (
 	"fmt"
 
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk"
 )
 
 func main() {
@@ -186,7 +225,7 @@ package main
 import (
 	"fmt"
 
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk"
 )
 
 func main() {
@@ -214,7 +253,7 @@ package main
 import (
 	"fmt"
 
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk"
 )
 
 func main() {
@@ -242,7 +281,7 @@ package main
 import (
 	"fmt"
 
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk"
 )
 
 func main() {
@@ -271,7 +310,7 @@ package main
 import (
 	"fmt"
 
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/sdk"
+	"github.com/pingponglabs-backend/styley-golang-sdk/sdk"
 )
 
 func main() {

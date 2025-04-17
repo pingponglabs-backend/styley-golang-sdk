@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"git.mediamagic.ai/styley-sdks/styley-golang-sdk/internal/http"
+	"github.com/pingponglabs-backend/styley-golang-sdk/internal/http"
 )
 
 type Client struct {
