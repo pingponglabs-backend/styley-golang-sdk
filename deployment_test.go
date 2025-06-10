@@ -68,7 +68,7 @@ func TestCreateDeployment(t *testing.T) {
 					"input": "https://cdn.mediamagic.dev/media/c7dbd266-3aa3-11ed-8e27-e679ed67c206.jpeg",
 				},
 				ModelId:      "844218fa-c5d0-4cee-90ce-0b42d226ac8d",
-				Sync:         true,
+				Synchronous:  true,
 				OutputFormat: "png",
 				OutputWidth:  480,
 				OutputHeight: 480,
@@ -83,7 +83,7 @@ func TestCreateDeployment(t *testing.T) {
 				Args: map[string]interface{}{
 					"input": "https://cdn.mediamagic.dev/media/c7dbd266-3aa3-11ed-8e27-e679ed67c206.jpeg",
 				},
-				Sync: true,
+				Synchronous: true,
 			},
 			expectErr: true,
 			apikey:    "xxxx-xxx-xxxx-xxx", //Replace with valid API key
@@ -95,8 +95,8 @@ func TestCreateDeployment(t *testing.T) {
 				Args: map[string]interface{}{
 					"test": "https://cdn.mediamagic.dev/media/c7dbd266-3aa3-11ed-8e27-e679ed67c206.jpeg",
 				},
-				ModelId: "844218fa-c5d0-4cee-90ce-0b42d226ac8d",
-				Sync:    true,
+				ModelId:     "844218fa-c5d0-4cee-90ce-0b42d226ac8d",
+				Synchronous: true,
 			},
 			expectErr: true,
 			apikey:    "xxxx-xxx-xxxx-xxx", //Replace with valid API key
@@ -108,8 +108,8 @@ func TestCreateDeployment(t *testing.T) {
 				Args: map[string]interface{}{
 					"input": "https://cdn.mediamagic.dev/media/c7dbd266-3aa3-11ed-8e27-e679ed67c206.jpeg",
 				},
-				ModelId: "844218fa-c5d0-4cee-90ce-0b42d226ac8d",
-				Sync:    true,
+				ModelId:     "844218fa-c5d0-4cee-90ce-0b42d226ac8d",
+				Synchronous: true,
 			},
 			expectErr: true,
 			apikey:    "xxxx-xxx-xxxx-xxx",

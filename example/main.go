@@ -16,7 +16,7 @@ func main() {
 		Name:    "Background Remover Pro",
 		ModelId: "3ca20b58-a07b-492a-8294-e366b5122947",
 		Args: map[string]interface{}{
-			"image_file": "https://cdn2.styley.ai/d37266e2-fe3e-11ef-b7e7-246e96be0954.png",
+			"image_file": "https://cdn2.styley.ai/d99326d0-45c6-11f0-a674-246e96be0954.jpg",
 		},
 		OutputFormat: "jpeg",
 		OutputWidth:  300,

@@ -68,7 +68,7 @@ func (c *Client) Create(deployment CreateDeployment) (*Deployment, error) {
 	if eta == 0 {
 		eta = ETA
 	}
-	if deployment.Sync {
+	if deployment.Synchronous {
 		for status != COMPLETE && status != FAILED && eta > 0 {
 			time.Sleep(10 * time.Second)
 			job, err := c.GetJob(deploymentResponse.Job.Id)

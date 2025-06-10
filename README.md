@@ -132,7 +132,7 @@ func main() {
 			"steps":           "30",
 			"width":           "672",
 		},
-		Model: "66a8ccd5-ed5d-4133-b0c8-c3862a575a9e",
+		ModelId: "66a8ccd5-ed5d-4133-b0c8-c3862a575a9e",
 		
 	})
 
@@ -172,7 +172,7 @@ func main() {
 		OutputFormat: "jpeg",
 		OutputWidth:  300,
 		OutputHeight: 300,
-		Sync:         true,
+		Synchronous: true,
 	}
 	deplyementResponse, err := client.Deployments().Create(deploymentReq)
 	if err != nil {
