@@ -21,7 +21,7 @@ func main() {
 		OutputFormat: "jpeg",
 		OutputWidth:  300,
 		OutputHeight: 300,
-		Sync:         true,
+		Synchronous:  true,
 	}
 	deplyementResponse, err := client.Deployments().Create(deploymentReq)
 	if err != nil {

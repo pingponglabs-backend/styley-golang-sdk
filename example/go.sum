@@ -1,4 +1,4 @@
-github.com/pingponglabs-backend/styley-golang-sdk v0.0.3 h1:CMSVTNSrp9E/6OLkq8f/GDCbrdtS/GU9TkyctF8MKAA=
-github.com/pingponglabs-backend/styley-golang-sdk v0.0.3/go.mod h1:VuUiy1pUmg2Xzxihz7j+hBRjfGFYrinWcrIflxBAKrU=
+github.com/pingponglabs-backend/styley-golang-sdk v0.0.4 h1:Gv80cuR7JD5+lvm1WWIcjddgwpk5SVoAtY61BvdCdAY=
+github.com/pingponglabs-backend/styley-golang-sdk v0.0.4/go.mod h1:VuUiy1pUmg2Xzxihz7j+hBRjfGFYrinWcrIflxBAKrU=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
